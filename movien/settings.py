@@ -25,8 +25,8 @@ SECRET_KEY = '0ylezm%z)=n3urn8ls_a*q6bib=902=bx*f77(bx#t2md31aq4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['44.201.127.15', '44.201.127.15:8000' , 'http://127.0.0.1:8000/', 'http://44.201.127.15:8000/']
-
+ALLOWED_HOSTS = ['44.201.127.15', '44.201.127.15:8000' , 'http://127.0.0.1:8000/', 'http://44.201.127.15:8000/','https://movieverse-production.up.railway.app','127.0.0.1','movieverse-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://movieverse-production.up.railway.app']
 
 # Application definition
 
@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'movien.urls'

@@ -16,3 +16,5 @@ sklearn==0.0
 sqlparse==0.4.3
 threadpoolctl==3.1.0
 tzdata==2023.3
+gunicorn
+whitenoise
